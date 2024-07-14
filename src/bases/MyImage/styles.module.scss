@@ -1,0 +1,9 @@
+.root {
+  position: relative;
+
+  :global {
+    .ant-image {
+      display: block;
+    }
+  }
+}

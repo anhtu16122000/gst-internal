@@ -1,0 +1,34 @@
+import { TEACHING_METHOD, TUTOR_PROFILE_STATUS } from "../enum";
+import HigherEducationSchoolEntity from "./HigherEducationSchool.type";
+import SubjectTutorEntity from "./SubjectTutor.type";
+import TeachingClassTypeTutorEntity from "./TeachingClassTypeTutor.type";
+import AccountEntity from "./account.type";
+import DistrictEntity from "./district.type";
+import { ProvinceEntity } from "./province.type";
+import WardEntity from "./ward.type";
+
+export type TutorEntity = {
+  id: string;
+  code: string;
+  phoneNumber: string;
+  address: string;
+  province: ProvinceEntity;
+  district: DistrictEntity;
+  ward: WardEntity;
+  studentYear: number;
+  fontStudentCardImage: string;
+  backStudentCardImage: string;
+  GPA: number;
+  majorCode: string;
+  DOB: Date;
+  teachingMethod: TEACHING_METHOD;
+  school: HigherEducationSchoolEntity;
+  expectedSalary: number;
+  weeklySession: number;
+  note: string;
+  account: AccountEntity;
+  subjectTutors: SubjectTutorEntity[];
+  teachingClassTypeTutors: TeachingClassTypeTutorEntity[];
+  deletedAt: string;
+  profileStatus: TUTOR_PROFILE_STATUS;
+};
